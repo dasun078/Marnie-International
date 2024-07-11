@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marnie International</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/iconic/2.0.1/iconic.min.css">
+
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+    <!-- WhatsApp Chat Widget -->
+    <script type="text/javascript">
+        (function () {
+            var options = {
+                whatsapp: "+94703919181", // WhatsApp number
+                call_to_action: "Chat with us", // Call to action
+                position: "right", // Position may be 'right' or 'left'
+            };
+            var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        })();
+    </script>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Marnie International Logo" class="logo"></a>
+                <div class="menu-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('services') }}">Services</a></li>
+                    <li><a href="{{ url_for('team') }}">Team</a></li>
+                    <li><a href="{{ url_for('jobs') }}">Jobs</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    {% block content %}{% endblock %}
+    <footer>
+        <div class="container footer-info">
+            <div class="footer-details">
+                <p>&copy; 2024 Marnie International. All rights reserved.</p>
+                <p>No.20, Kandy - Colombo Rd, Dalugama, Kelaniya, Sri Lanka</p>
+                <p>Phone: +94 11 2 993 993</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/marnieinternational?locale=en_GB" target="_blank"><img src="{{ url_for('static', filename='images/facebook.png') }}" alt="Facebook"></a>
+                <a href="https://www.linkedin.com/company/marnie_international" target="_blank"><img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="LinkedIn"></a>
+                <a href="https://www.instagram.com/marnie_international" target="_blank"><img src="{{ url_for('static', filename='images/intergram.jpg') }}" alt="Instagram"></a>
+                <a href="https://femis.imexerp.com/" target="_blank"><img src="{{ url_for('static', filename='images/staffp.png') }}" alt="Staff Portal"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

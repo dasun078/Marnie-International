@@ -1,0 +1,1545 @@
+/* CSS Variables */
+:root {
+    --primary-color: #0033a0; /* Royal Blue */
+    --secondary-color: #0044cc; /* Darker Blue */
+    --light-color: #f5f5f5;
+    --dark-color: #333;
+    --font-family: 'Open Sans', Arial, sans-serif;
+    --transition-speed: 0.3s;
+    --border-radius: 10px;
+    --webkit-background-clip:text;
+    --box-shadow-light: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --box-shadow-dark: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Base Styles */
+body {
+    font-family: var(--font-family);
+    color: var(--dark-color);
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-color);
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    color: var(--primary-color);
+    padding: 1rem 0;
+    box-shadow: var(--box-shadow-light);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 65px;
+    width: auto;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 5px 0;
+}
+
+/* Navbar */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--border-radius);
+    transition: background var(--transition-speed), color var(--transition-speed);
+}
+
+nav a:hover, nav a.active {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    box-shadow: var(--box-shadow-dark);
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-info p {
+    margin: 0;
+}
+
+.footer-social a {
+    margin: 0 0.5rem;
+}
+
+.footer-social img {
+    width: 35px;
+    height: 35px;
+    transition: opacity var(--transition-speed), transform var(--transition-speed);
+}
+
+.footer-social img:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+/* Buttons */
+.btn {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: background var(--transition-speed), transform var(--transition-speed);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    padding: 6rem 2rem;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero.jpg') no-repeat center center;
+    background-size: cover;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem 3rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: var(--border-radius);
+    animation: fadeIn 1.5s ease-out;
+}
+
+.hero-text h1 {
+    font-size: 4.5rem;
+    margin: 0;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1s forwards 0.5s;
+}
+
+.hero-text p {
+    font-size: 1.9rem;
+    margin: 0.5rem 0;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1s forwards 0.7s;
+}
+
+.hero-text .btn {
+    margin-top: 1.5rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1s forwards 0.9s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* index.css or achievements.css */
+
+/* Achievements section styling */
+.achievements {
+    position: relative;
+    padding: 60px 0;
+    overflow: hidden;
+    background: linear-gradient(135deg, #003366, #0054a6); /* Gradient background */
+    color: #fff;
+}
+
+.achievements-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+    z-index: 1;
+}
+
+.achievements .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.achievements h2 {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.achievement {
+    background: #ffffff;
+    color: #003366;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.achievement:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.achievement-icon {
+    margin-bottom: 20px;
+}
+
+.achievement-icon img {
+    width: 60px;
+    height: 60px;
+}
+
+.achievement-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.achievement-content .number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0054a6;
+    background: linear-gradient(135deg, #003366, #0054a6); /* Gradient text */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Counter animation */
+@keyframes counterUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.achievement-content .number {
+    animation: counterUp 0.5s ease-in-out;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+    .achievements h2 {
+        font-size: 2.5rem;
+    }
+
+    .achievement {
+        padding: 20px;
+    }
+
+    .achievement-icon img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .achievements h2 {
+        font-size: 2rem;
+    }
+
+    .achievement {
+        padding: 15px;
+    }
+
+    .achievement-icon img {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .achievements h2 {
+        font-size: 1.8rem;
+    }
+
+    .achievement-content .number {
+        font-size: 1.8rem;
+    }
+
+    .achievement-icon img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+
+
+/* Section Styles */
+section {
+    padding: 5rem 2rem;
+}
+
+/* About Section */
+.about {
+    background-color: #fff;
+    padding: 6rem 2rem;
+}
+
+.about-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.about-intro h1 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.about-intro p {
+    font-size: 1.4rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.about-content-text {
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-light);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.about-content-text:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-dark);
+}
+
+.about-content-text h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.about-content-text p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.about-content-text .partners {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.partner-logo {
+    text-align: center;
+    max-width: 150px;
+    margin: 1rem;
+}
+
+.partner-logo img {
+    width: 100%;
+    height: 50%;
+    max-height: 80px;
+    object-fit: contain;
+    transition: opacity var(--transition-speed), transform var(--transition-speed);
+}
+
+.partner-logo img:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.partner-logo p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
+.partner-logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.partner-logo a:hover {
+    opacity: 0.8;
+}
+
+/* Services Section */
+.services {
+    background-color: var(--light-color);
+    padding: 6rem 2rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.service {
+    text-align: center;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-light);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-dark);
+}
+
+.service img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+.service h3 {
+    margin: 1rem 0 0.5rem;
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.service p {
+    margin: 0;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+/* CTA Section */
+.cta {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 5rem 2rem;
+    margin-top: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-dark);
+}
+
+.cta h2 {
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+}
+
+.cta p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.cta .btn {
+    background-color: var(--secondary-color);
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+.cta .btn:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact {
+    background: #f4f4f9; /* Light background color for the section */
+    padding: 6rem 2rem;
+}
+
+/* Main heading style */
+.contact h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+/* Container for form and contact info */
+.contact .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* Contact form styling */
+.contact .contact-form {
+    background-color: #ffffff; /* White background for the form */
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-light);
+    max-width: 600px; /* Centering and limiting form width */
+    margin: 0 auto;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Label styling */
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+    font-weight: bold;
+}
+
+/* Input and textarea styling */
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+    font-size: 1rem;
+    background: #f9f9f9; /* Slight background color for inputs */
+}
+
+/* Input focus state */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 84, 166, 0.2); /* Subtle focus shadow */
+}
+
+/* Submit button styling */
+.form-group input[type="submit"] {
+    background: var(--secondary-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: background var(--transition-speed), transform var(--transition-speed);
+}
+
+/* Submit button hover state */
+.form-group input[type="submit"]:hover {
+    background: var(--primary-color);
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact {
+    background-color: #f4f6f9;
+    padding: 6rem 2rem;
+    border-top: 5px solid var(--primary-color);
+}
+
+.contact h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.contact .container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* Form Styles */
+.contact-form {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Form Row Styles */
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+/* Form Group Styles */
+.form-group {
+    flex: 1 1 100%;
+}
+
+/* Adjusted for larger screens */
+@media (min-width: 768px) {
+    .form-group {
+        flex: 1 1 calc(50% - 1.5rem); /* 2 columns */
+    }
+}
+
+@media (min-width: 1024px) {
+    .form-group {
+        flex: 1 1 calc(33.33% - 1.5rem); /* 3 columns */
+    }
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form input[type="tel"]:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+/* Contact Information Styles */
+.contact-info {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-info h3 {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.contact-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Map Styles */
+.contact-info .map {
+    margin-top: 2rem;
+}
+
+.contact-info .map iframe {
+    width: 100%;
+    height: 400px; /* Increased height for better visibility */
+    border: none;
+    border-radius: 10px;
+}
+
+/* Animated Success and Error Messages */
+.contact-form .message {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    display: none;
+}
+
+.contact-form .message.success {
+    background-color: #28a745; /* Green */
+}
+
+.contact-form .message.error {
+    background-color: #dc3545; /* Red */
+}
+
+
+/* Currency Converter Styles */
+#currency-converter {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: var(--light-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-light);
+}
+
+#currency-converter input,
+#currency-converter select,
+#currency-converter button {
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border-radius: var(--border-radius);
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+#currency-converter button {
+    background: var(--secondary-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background var(--transition-speed), transform var(--transition-speed);
+}
+
+#currency-converter button:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Converted Amount */
+#converted-amount {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    color: var(--dark-color);
+    font-weight: bold;
+}
+
+/* Table Styles */
+.job-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f9f9f9; /* Light grey background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+.job-table th, .job-table td {
+    padding: 12px 15px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.job-table thead {
+    background-color: #0033cc; /* Royal blue background for header */
+    color: #ffffff; /* White text for header */
+}
+
+.job-table th {
+    font-weight: bold;
+    font-size: 1.1em; /* Slightly larger text for header */
+}
+
+.job-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternating row colors */
+}
+
+.job-table tbody tr:hover {
+    background-color: #ddd; /* Highlight row on hover */
+}
+
+.job-table .job-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    .job-table th, .job-table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .job-table thead {
+        display: none;
+    }
+
+    .job-table tbody tr {
+        margin-bottom: 10px;
+        display: block;
+        background-color: #fff;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .job-table tbody td {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .job-table tbody td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        margin-right: 10px;
+    }
+}
+
+/* Currency Converter Form */
+#currency-converter {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    padding: 1rem;
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-light);
+}
+
+.converter-group {
+    display: flex;
+    gap: 1rem;
+}
+
+#amount {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+}
+
+#currency {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background var(--transition-speed), transform var(--transition-speed);
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+#converted-amount {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Modern Jobs Table */
+.jobs-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow-light);
+}
+
+.jobs-table thead {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.jobs-table thead th {
+    padding: 1rem;
+    text-align: left;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.jobs-table tbody td {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.jobs-table tbody tr {
+    transition: background var(--transition-speed);
+}
+
+.jobs-table tbody tr:hover {
+    background: var(--light-color);
+}
+
+.jobs-table tbody td .job-icon {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+.jobs-table tbody td a {
+    text-decoration: none;
+}
+
+/* Job Opportunities Table Styles */
+.jobs table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f9f9f9; /* Light grey background for the table */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for the table */
+}
+
+.jobs th, .jobs td {
+    padding: 12px 15px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.jobs thead {
+    background-color: #0033cc; /* Royal blue background for header */
+    color: #ffffff; /* White text for the header */
+}
+
+.jobs th {
+    font-weight: bold;
+    font-size: 1.1em; /* Slightly larger text for header */
+}
+
+.jobs tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternating row colors for readability */
+}
+
+.jobs tbody tr:hover {
+    background-color: #ddd; /* Highlight row on hover */
+}
+
+.jobs .job-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.jobs .job-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.jobs p {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .jobs table {
+        border: 0;
+    }
+
+    .jobs thead {
+        display: none;
+    }
+
+    .jobs tbody, .jobs tr, .jobs td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .jobs tr {
+        margin-bottom: 10px;
+        background-color: #fff;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .jobs td {
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+    }
+
+    .jobs td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 45%;
+        padding-left: 10px;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+}
+
+/* jobs.css */
+
+/* Main section styling */
+.jobs {
+    background-color: #f4f4f9; /* Light background for a modern look */
+    padding: 50px 0;
+}
+
+.jobs .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.jobs h2 {
+    font-size: 2.5rem;
+    color: #003366; /* Dark blue for contrast */
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.jobs p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.jobs h3 {
+    font-size: 1.5rem;
+    color: #003366;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Country selector styling */
+#country-selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#country {
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+}
+
+table thead {
+    background-color: #003366; /* Dark blue background for the table header */
+    color: #fff;
+}
+
+table tbody tr {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1; /* Light grey background on hover */
+}
+
+table td {
+    vertical-align: middle;
+}
+
+.job-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    table thead {
+        display: none; /* Hide table header on small screens */
+    }
+
+    table, table tbody, table tr, table td {
+        display: block;
+        width: 100%;
+    }
+
+    table tr {
+        margin-bottom: 10px;
+        border-bottom: 2px solid #ddd;
+    }
+
+    table td {
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 45%;
+        padding-left: 10px;
+        font-weight: bold;
+        color: #003366;
+        background: #f4f4f9;
+    }
+}
+
+/* Add additional styling for responsiveness and aesthetics */
+@media (max-width: 480px) {
+    .jobs h2 {
+        font-size: 2rem;
+    }
+
+    .jobs h3 {
+        font-size: 1.2rem;
+    }
+
+    #country {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+}
+
+
+/* Jobs Section */
+.jobs {
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.jobs h2 {
+    font-size: 2.5em;
+    color: #003366;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.jobs p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.jobs h3 {
+    font-size: 1.5em;
+    color: #003366;
+    margin: 30px 0 20px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+form select, form input, form button {
+    padding: 10px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form select:focus, form input:focus, form button:focus {
+    outline: none;
+    border-color: #003366;
+}
+
+form button {
+    background-color: #003366;
+    color: #fff;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #00509e;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #003366;
+    color: #fff;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.job-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .jobs {
+        padding: 20px;
+    }
+
+    table th, table td {
+        padding: 10px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    form select, form input, form button {
+        margin: 5px 0;
+    }
+}
+
+
+/* Table Responsive Design */
+@media (max-width: 768px) {
+.jobs-table thead {
+        display: none;
+}
+
+.jobs-table tbody tr {
+        display: block;
+        margin-bottom: 1rem;
+}
+
+.jobs-table tbody td {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+}
+
+jobs-table tbody td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 0.5rem;
+        background: #f0f4f8;
+        border-right: 1px solid #ddd;
+        width: 50%;
+        box-sizing: border-box;
+}
+
+.jobs-table tbody td .job-icon {
+        margin-right: 0;
+    
+}
+
+/* Notes and Important Messages */
+.note {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-light);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.important {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #fef4f4;
+    border-radius: var(--border-radius);
+    color: #d9534f;
+    text-align: center;
+    font-weight: bold;
+}
+}
+/* Team Section */
+.team {
+    background-color: #fff;
+    padding: 6rem 2rem;
+    margin-top: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-dark);
+}
+
+.team h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.8rem;
+}
+
+.team .team-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.team-member {
+    text-align: center;
+    background-color: var(--light-color);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-light);
+    max-width: 320px;
+    margin: 1rem;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-dark);
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    clip-path: circle(); /* Circle shape */
+    border: 4px solid var(--primary-color); /* Border color and width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.team-member h3 {
+    color: var(--primary-color);
+    margin: 0.5rem 0 0;
+}
+
+.team-member p {
+    color: #555;
+    font-size: 1.1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header .container {
+        flex-direction: column;
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    header nav ul.active {
+        display: flex;
+    }
+
+    header nav li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-content-text {
+        width: 100%;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        max-width: 100%;
+    }
+
+    .jobs-table thead th {
+        font-size: 1rem;
+    }
+}
+
+/* WhatsApp Chat Button */
+#whatsapp-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#whatsapp-chat a img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#whatsapp-chat a img:hover {
+    transform: scale(1.1);
+}

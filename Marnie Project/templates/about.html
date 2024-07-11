@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-overlay">
+        <img src="{{ url_for('static', filename='images/hero.jpg') }}" alt="Hero Image" class="hero-img">
+        <div class="hero-text">
+            <h1>About Us</h1>
+            <p>Learn more about our mission, vision, and the team behind Marnie International.</p>
+            <a href="#about" class="btn btn-primary">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about">
+    <div class="container">
+        <div class="about-intro">
+            <h1>About Us</h1>
+            <p>Welcome to Marnie Internationals, where excellence meets opportunity. Our commitment to accuracy, honesty, and integrity stands as a beacon of trust in the dynamic world of recruitment.</p>
+            <p>Whether you are a candidate seeking your next career milestone or a skilled professional looking for guidance, our dedicated, transparent, and friendly team is here to assist you every step of the way.</p>
+        </div>
+
+        <div class="about-content">
+            <div class="about-content-text">
+                <h2>Our Vision</h2>
+                <p>To be the foremost catalyst in shaping dynamic career journeys, connecting talent with opportunity, and fostering a world where individuals thrive in roles that ignite their passion and potential.</p>
+            </div>
+
+            <div class="about-content-text">
+                <h2>Our Mission</h2>
+                <p>Moving forward, ensuring mutual success and long-lasting reliability through integrity and personalized service, creating the most appropriate and tailored opportunities for experienced professionals pursuing their career dreams beyond Sri Lankan borders.</p>
+            </div>
+
+            <div class="about-content-text">
+                <h2>Who We Are</h2>
+                <p>Marnie Internationals is a recruitment agency dedicated to aligning individuals with their skills, aspirations, and values. With over 1200 successful placements, we have helped many find success and have made significant contributions to Turkey's construction industry.</p>
+                <p>Our history began with the IGA project, and we have since been involved in several landmark projects including Bodrum, Istanbul, Kastamonu, and the Akkuyu Nuclear Power Plant, working with esteemed organizations such as IGA, Kalyon, Kolin, Akyapi, Ciftay, and Cengiz.</p>
+            </div>
+            
+            <!-- New Section: Foreign Companies We Cooperate With -->
+            <div class="about-content-text">
+                <h2>Our International Partners</h2>
+                <p>At Marnie Internationals, we pride ourselves on our strong relationships with prestigious foreign companies. Our collaborations span various industries and regions, ensuring that we offer the best opportunities for our candidates and clients. Here are some of the esteemed organizations we work with:</p>
+                <div class="partners">
+                    <div class="partner-logo">
+                        <a href="https://www.igatr.com/" target="_blank" title="Visit IGA Website">
+                            <img src="{{ url_for('static', filename='images/iga.jpg') }}" alt="IGA">
+                            <p>IGA</p>
+                        </a>
+                    </div>
+                    <div class="partner-logo">
+                        <a href="https://www.kalyoninsaat.com.tr/" target="_blank" title="Visit Kalyon Website">
+                            <img src="{{ url_for('static', filename='images/kalyon.png') }}" alt="Kalyon">
+                            <p>Kalyon</p>
+                        </a>
+                    </div>
+                    <div class="partner-logo">
+                        <a href="https://www.kolin.com.tr/" target="_blank" title="Visit Kolin Website">
+                            <img src="{{ url_for('static', filename='images/kolin.jpg') }}" alt="Kolin">
+                            <p>Kolin</p>
+                        </a>
+                    </div>
+                    <div class="partner-logo">
+                        <a href="https://www.akyapi.com.tr/" target="_blank" title="Visit Akyapi Website">
+                            <img src="{{ url_for('static', filename='images/akyapi.png') }}" alt="Akyapi">
+                            <p>Akyapi</p>
+                        </a>
+                    </div>
+                    <div class="partner-logo">
+                        <a href="https://www.ciftay.com/" target="_blank" title="Visit Ciftay Website">
+                            <img src="{{ url_for('static', filename='images/ciftay.png') }}" alt="Ciftay">
+                            <p>Ciftay</p>
+                        </a>
+                    </div>
+                    <div class="partner-logo">
+                        <a href="https://www.cengiz.com.tr/" target="_blank" title="Visit Cengiz Website">
+                            <img src="{{ url_for('static', filename='images/cengiz.png') }}" alt="Cengiz">
+                            <p>Cengiz</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+    <h2>Ready to Find Your Next Opportunity?</h2>
+    <p>Join us and explore exciting career opportunities with top companies.</p>
+    <a href="{{ url_for('contact') }}" class="btn btn-secondary">Get in Touch</a>
+</section>
+<!-- WhatsApp Chat Widget -->
+<div id="whatsapp-chat" class="whatsapp-chat">
+    <a href="https://wa.me/+94703919181" target="_blank">  
+    </a>
+</div>
+{% endblock %}

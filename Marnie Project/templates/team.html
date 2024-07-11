@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="team">
+    <div class="container">
+        <h2>Meet Our Team</h2>
+        <p>Our team is made up of experienced professionals dedicated to helping you achieve your career goals. Learn more about the experts who make Marnie International exceptional.</p>
+        <div class="team-members">
+            <!-- Existing Team Members -->
+            <div class="team-member">
+                <div class="team-member-img">
+                    <img src="{{ url_for('static', filename='images/ceo.jpg') }}" alt="Brian Wijemanna">
+                </div>
+                <div class="team-info">
+                    <h3>BRIAN WIJEMANNA</h3>
+                    <p class="position">Founder & CEO</p>
+                    <p>Brian is the visionary behind Marnie International. With years of experience in recruitment, he leads the team with dedication and expertise.</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="team-member-img">
+                    <img src="{{ url_for('static', filename='images/visa officer.png') }}" alt="Elina Wijemanna">
+                </div>
+                <div class="team-info">
+                    <h3>ELINA WIJEMANNA</h3>
+                    <p class="position">DIRECTOR</p>
+                    <p>Elina has a keen eye for talent and is committed to finding the best candidates for our clients.</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="team-member-img">
+                    <img src="{{ url_for('static', filename='images/manager.jpg') }}" alt="Sajeewa Perera">
+                </div>
+                <div class="team-info">
+                    <h3>SAJEEWA PERERA</h3>
+                    <p class="position">MANAGER</p>
+                    <p>Emily provides valuable support in the recruitment process, ensuring that candidates and employers meet their goals.</p>
+                </div>
+            </div>
+            <!-- New Team Members -->
+            <div class="team-member">
+                <div class="team-member-img">
+                    <img src="{{ url_for('static', filename='images/consultant1.jpg') }}" alt="Alex Martin">
+                </div>
+                <div class="team-info">
+                    <h3>Alex Martin</h3>
+                    <p class="position">Senior Recruitment Consultant</p>
+                    <p>Alex specializes in building strong relationships with clients and candidates, providing tailored recruitment solutions.</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="team-member-img">
+                    <img src="{{ url_for('static', filename='images/consultant2.jpg') }}" alt="Jessica Brown">
+                </div>
+                <div class="team-info">
+                    <h3>Jessica Brown</h3>
+                    <p class="position">Talent Acquisition Specialist</p>
+                    <p>Jessica excels in sourcing top talent and developing effective recruitment strategies to meet clients' needs.</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="team-member-img">
+                    <img src="{{ url_for('static', filename='images/consultant3.jpg') }}" alt="Michael Lee">
+                </div>
+                <div class="team-info">
+                    <h3>Michael Lee</h3>
+                    <p class="position">HR Consultant</p>
+                    <p>Michael provides expert advice on HR policies and practices, helping businesses create effective HR strategies.</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="team-member-img">
+                    <img src="{{ url_for('static', filename='images/consultant4.jpg') }}" alt="Sarah Wilson">
+                </div>
+                <div class="team-info">
+                    <h3>Sarah Wilson</h3>
+                    <p class="position">Recruitment Coordinator</p>
+                    <p>Sarah manages the end-to-end recruitment process, ensuring smooth operations and positive experiences for both clients and candidates.</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="team-member-img">
+                    <img src="{{ url_for('static', filename='images/consultant5.jpg') }}" alt="David Anderson">
+                </div>
+                <div class="team-info">
+                    <h3>David Anderson</h3>
+                    <p class="position">Client Relations Manager</p>
+                    <p>David focuses on building and maintaining strong relationships with clients, ensuring satisfaction and long-term partnerships.</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="team-member-img">
+                    <img src="{{ url_for('static', filename='images/consultant6.jpg') }}" alt="Linda Green">
+                </div>
+                <div class="team-info">
+                    <h3>Linda Green</h3>
+                    <p class="position">Recruitment Advisor</p>
+                    <p>Linda provides expert advice on career development and job placement, helping candidates achieve their professional goals.</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="team-member-img">
+                    <img src="{{ url_for('static', filename='images/consultant7.jpg') }}" alt="Chris Taylor">
+                </div>
+                <div class="team-info">
+                    <h3>Chris Taylor</h3>
+                    <p class="position">Talent Development Manager</p>
+                    <p>Chris works on developing and implementing talent management strategies to support clients in achieving their organizational goals.</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="team-member-img">
+                    <img src="{{ url_for('static', filename='images/consultant8.jpg') }}" alt="Megan Harris">
+                </div>
+                <div class="team-info">
+                    <h3>Megan Harris</h3>
+                    <p class="position">Recruitment Consultant</p>
+                    <p>Megan helps clients find the right candidates for their job openings, focusing on building strong professional networks.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- WhatsApp Chat Widget -->
+<div id="whatsapp-chat" class="whatsapp-chat">
+    <a href="https://wa.me/+94703919181" target="_blank">  
+    </a>
+</div>
+{% endblock %}
