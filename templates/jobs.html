@@ -1,0 +1,323 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="jobs">
+    <div class="container">
+        <h2>Foreign Job Opportunities</h2>
+        <p>Available vacancies for MARNIE INTERNATIONAL (PVT) LTD [Reg.#3536] are as follows.</p>
+        <p>Tel: 0112918181, 0112918191, 0776649216 | Fax: 0112918191 | Email: marnie_recruitment@hotmail.com</p>
+
+        <h3>Select Country</h3>
+        <form id="country-selector">
+            <select id="country" class="form-select">
+                <option value="all">All</option>
+                <option value="Turkey">Turkey</option>
+                <option value="UAE">UAE</option>
+            </select>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Country</th>
+                    <th>Job Title</th>
+                </tr>
+            </thead>
+            <tbody id="jobs-list">
+                <!-- Turkey Jobs -->
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/attendant.png') }}" alt="Attendant - Public Area" class="job-icon">
+                        Attendant - Public Area
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/bar-bender.png') }}" alt="Bar Bender" class="job-icon">
+                        Bar Bender
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/carpenter-icon.png') }}" alt="Carpenter (Formwork Carpenter)" class="job-icon">
+                        Carpenter (Formwork Carpenter)
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/driver-icon.png') }}" alt="Driver - Heavy Truck" class="job-icon">
+                        Driver - Heavy Truck
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/driver-trailer-icon.png') }}" alt="Driver - Trailer" class="job-icon">
+                        Driver - Trailer
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/driver-truck-icon.png') }}" alt="Driver - Truck" class="job-icon">
+                        Driver - Truck
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/electrician-icon.png') }}" alt="Electrician - General" class="job-icon">
+                        Electrician - General
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/engineer-civil-icon.png') }}" alt="Engineer - Civil" class="job-icon">
+                        Engineer - Civil
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/engineer-qs-mep-icon.png') }}" alt="Engineer - QS MEP" class="job-icon">
+                        Engineer - QS MEP
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/foreman-icon.png') }}" alt="Foreman - Civil" class="job-icon">
+                        Foreman - Civil
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/gardener-icon.png') }}" alt="Gardener" class="job-icon">
+                        Gardener
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/housekeeper-icon.png') }}" alt="Housekeeper - Non Domestic" class="job-icon">
+                        Housekeeper - Non Domestic
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/mechanic-icon.png') }}" alt="Mechanic - Heavy Equipment" class="job-icon">
+                        Mechanic - Heavy Equipment
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/operator-crane-icon.png') }}" alt="Operator - Crane" class="job-icon">
+                        Operator - Crane
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/operator-excavate-icon.png') }}" alt="Operator - Excavate" class="job-icon">
+                        Operator - Excavate
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/operator-loader-icon.png') }}" alt="Operator - Loader" class="job-icon">
+                        Operator - Loader
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/operator-ready-mix-concrete-pump-icon.png') }}" alt="Operator - Ready Mix Concrete Pump" class="job-icon">
+                        Operator - Ready Mix Concrete Pump
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/operator-boom-truck-icon.png') }}" alt="Operator Boom Truck" class="job-icon">
+                        Operator Boom Truck
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/operator-general-icon.png') }}" alt="Operator General" class="job-icon">
+                        Operator General (Telehandler Operator)
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/operator-jcb-icon.png') }}" alt="Operator JCB" class="job-icon">
+                        Operator JCB
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/plumber.png') }}" alt="Plumber" class="job-icon">
+                        Plumber
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/serviceman-icon.png') }}" alt="Serviceman" class="job-icon">
+                        Serviceman (Construction Vehicle/Equipment Maintenance)
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/spray-painter-icon.png') }}" alt="Spray Painter" class="job-icon">
+                        Spray Painter (Automobile)
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/steel-fixer-icon.png') }}" alt="Steel Fixer" class="job-icon">
+                        Steel Fixer
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/surveyor-icon.png') }}" alt="Surveyor" class="job-icon">
+                        Surveyor
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/technician-auto-icon.png') }}" alt="Technician Auto AC" class="job-icon">
+                        Technician Auto AC
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/technician-dent-icon.png') }}" alt="Technician Dent" class="job-icon">
+                        Technician Dent
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/technician-hydraulic-icon.png') }}" alt="Technician Hydraulic" class="job-icon">
+                        Technician Hydraulic
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/technician-painter-icon.png') }}" alt="Technician Painter" class="job-icon">
+                        Technician Painter (Automobile)
+                    </td>
+                </tr>
+                <tr data-country="Turkey">
+                    <td data-label="Country">Turkey</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/technician-wheel-alignment-icon.png') }}" alt="Technician Wheel Alignment" class="job-icon">
+                        Technician Wheel Alignment
+                    </td>
+                </tr>
+
+                <!-- UAE Jobs -->
+                <tr data-country="UAE">
+                    <td data-label="Country">UAE</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/ac-technician-icon.png') }}" alt="AC Technician" class="job-icon">
+                        AC Technician
+                    </td>
+                </tr>
+                <tr data-country="UAE">
+                    <td data-label="Country">UAE</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/electrician-icon.png') }}" alt="Electrician" class="job-icon">
+                        Electrician
+                    </td>
+                </tr>
+                <tr data-country="UAE">
+                    <td data-label="Country">UAE</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/foreman-general-icon.png') }}" alt="Foreman General" class="job-icon">
+                        Foreman General
+                    </td>
+                </tr>
+                <tr data-country="UAE">
+                    <td data-label="Country">UAE</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/housekeeper-icon.png') }}" alt="Housekeeper" class="job-icon">
+                        Housekeeper
+                    </td>
+                </tr>
+                <tr data-country="UAE">
+                    <td data-label="Country">UAE</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/mechanic-icon.png') }}" alt="Mechanic - General" class="job-icon">
+                        Mechanic - General
+                    </td>
+                </tr>
+                <tr data-country="UAE">
+                    <td data-label="Country">UAE</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/operator-excavate-icon.png') }}" alt="Operator - Excavator" class="job-icon">
+                        Operator - Excavator
+                    </td>
+                </tr>
+                <tr data-country="UAE">
+                    <td data-label="Country">UAE</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/operator-wheel-loader-icon.png') }}" alt="Operator - Wheel Loader" class="job-icon">
+                        Operator - Wheel Loader
+                    </td>
+                </tr>
+                <tr data-country="UAE">
+                    <td data-label="Country">UAE</td>
+                    <td data-label="Job Title">
+                        <img src="{{ url_for('static', filename='images/plumber-icon.png') }}" alt="Plumber" class="job-icon">
+                        Plumber
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<script>
+    // Add event listener to the country dropdown
+    document.getElementById('country').addEventListener('change', function () {
+        var selectedCountry = this.value;
+        var rows = document.querySelectorAll('#jobs-list tr');
+        rows.forEach(function (row) {
+            if (selectedCountry === 'all' || row.getAttribute('data-country') === selectedCountry) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    });
+
+    // Trigger change event to show all jobs by default
+    document.getElementById('country').dispatchEvent(new Event('change'));
+</script>
+<!-- WhatsApp Chat Widget -->
+<div id="whatsapp-chat" class="whatsapp-chat">
+    <a href="https://wa.me/+94703919181" target="_blank">  
+    </a>
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="services">
+    <div class="container">
+        <h2>Our Services</h2>
+        <div class="service">
+            <img src="{{ url_for('static', filename='images/recruitment.jpg') }}" alt="Recruitment">
+            <h3>Recruitment</h3>
+            <p>We offer comprehensive recruitment services for various industries including engineering, construction, hospitality, and more.</p>
+        </div>
+        <div class="service">
+            <img src="{{ url_for('static', filename='images/consulting.jpg') }}" alt="Consulting">
+            <h3>Consulting</h3>
+            <p>Expert consulting services to help you navigate the complexities of international job placements and career growth.</p>
+        </div>
+        <div class="service">
+            <img src="{{ url_for('static', filename='images/training.jpg') }}" alt="Training">
+            <h3>Training</h3>
+            <p>Training programs designed to enhance your skills, prepare you for interviews, and increase your employability.</p>
+        </div>
+        <div class="service">
+            <img src="{{ url_for('static', filename='images/visa.jpg') }}" alt="Visa Services">
+            <h3>Visa Assistance</h3>
+            <p>Assistance with visa applications and documentation to ensure a smooth transition to your new job abroad.</p>
+        </div>
+    </div>
+</section>
+<!-- WhatsApp Chat Widget -->
+<div id="whatsapp-chat" class="whatsapp-chat">
+    <a href="https://wa.me/+94784368217" target="_blank">
+        <img src="{{ url_for('static', filename='images/whatapp.jpg') }}" alt="Chat with us on WhatsApp">
+    </a>
+</div>
+{% endblock %}
